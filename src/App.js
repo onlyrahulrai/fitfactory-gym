@@ -1,8 +1,17 @@
-import './App.css';
+import "./App.css";
+import { Footer, Hero, Join, Plans, Programs,Reasons,Testimonials } from "./components";
+
+
 function App() {
   return (
     <div className="App">
-          <span style={{color: 'white'}}>Subscribe Zainkeepscode</span>
+      <Hero />
+      <Programs />
+      <Reasons />
+      <Plans />
+      <Testimonials />
+      <Join />
+      <Footer />
     </div>
   );
 }
