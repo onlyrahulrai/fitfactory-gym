@@ -3,7 +3,7 @@ import "./Join.css"
 
 const Join = () => {
   return (
-    <section className='Join' id='join-us'>
+    <section className='join' id='join-us'>
         <div className='left-j'>
             <hr />
             <div>
