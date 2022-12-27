@@ -37,7 +37,7 @@ const Header = () => {
               activeClass="active"
               onClick={onClickToggleMenu}
               to="hero"
-              span={true}
+              span="true"
               smooth={true}
             >
               Home
@@ -47,7 +47,7 @@ const Header = () => {
             <Link
               onClick={onClickToggleMenu}
               to="programs"
-              span={true}
+              span="true"
               smooth={true}
             >
               Programs
@@ -57,7 +57,7 @@ const Header = () => {
             <Link
               onClick={onClickToggleMenu}
               to="reasons"
-              span={true}
+              span="true"
               smooth={true}
             >
               Why us
@@ -67,7 +67,7 @@ const Header = () => {
             <Link
               onClick={onClickToggleMenu}
               to="plans"
-              span={true}
+              span="true"
               smooth={true}
             >
               Plans
@@ -77,7 +77,7 @@ const Header = () => {
             <Link
               onClick={onClickToggleMenu}
               to="testimonials"
-              span={true}
+              span="true"
               smooth={true}
             >
               Testimonials

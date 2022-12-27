@@ -26,7 +26,7 @@
 
 .plan:nth-child(2){
     background: var(--planCard);
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 .plan>svg{
@@ -88,7 +88,7 @@
     .plans{
         flex-direction: column;
     }
-}
-.plans>:nth-child(2){
-    transform: none;
+    .plans>:nth-child(2){
+        transform: none;
+    }
 }

@@ -5,7 +5,7 @@ import WhiteTick from "../../assets/whiteTick.png";
 
 const Plans = () => {
   return (
-    <section className="plans-container">
+    <section className="plans-container" id="plans">
       <div className="blur plans-blur-1"></div>
       <div className="blur plans-blur-2"></div>
       <div className="programs-header" style={{ gap: "2rem" }}>
@@ -20,7 +20,7 @@ const Plans = () => {
           <div className="plan" key={i}>
             {plan.icon}
             <span>{plan.name}</span>
-            <span>{plan.price}</span>
+            <span>{plan.price} ₹</span>
 
             <div className="features">
               {plan.features.map((feature, i) => (
