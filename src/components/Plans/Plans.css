@@ -26,7 +26,7 @@
 
 .plan:nth-child(2){
     background: var(--planCard);
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 .plan>svg{
@@ -82,4 +82,13 @@
     height: 23rem;
     top: 10rem;
     right: 0rem;
+}
+
+@media screen and (max-width:768px) {
+    .plans{
+        flex-direction: column;
+    }
+    .plans>:nth-child(2){
+        transform: none;
+    }
 }

@@ -6,14 +6,14 @@
     border: 1px solid var(--lightgray);
 }
 
-.footer{
+.footer-bottom{
     padding: 1rem 2rem;
     display: flex;
     flex-direction: column;
     gap: 4rem;
     align-items: center;
-    justify-content: center;
-    height: 20rem;
+    /* justify-content: center;
+    height: 20rem; */
 }
 
 .social-links{
@@ -47,4 +47,25 @@
     height:12rem;
     filter: blur(200px);
     background: rgb(255, 115, 0);
+}
+
+.row{
+    display: flex;
+    color: white;
+}
+
+.col{
+    width: 33.33%;
+    padding: 24px;
+}
+
+
+@media screen and (max-width:768px){
+    .row{
+        display: block;
+    }
+    .col{
+        width: 100% !important;
+        padding: 12px 24px !important;
+    }
 }

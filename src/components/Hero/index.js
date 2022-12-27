@@ -6,19 +6,25 @@ import HeroImageBack from "../../assets/hero_image_back.png";
 import Heart from "../../assets/heart.png";
 import Calories from "../../assets/calories.png";
 import { motion } from "framer-motion";
+import { useMemo } from "react";
+import NumberCounter from "number-counter";
 
 const transition = { type: "spring", duration: 3 };
 
 const Hero = () => {
+  const mobile = useMemo(() => {
+    return window.innerWidth <= 768;
+  }, [window.innerWidth]);
+
   return (
-    <div className="hero">
+    <div className="hero" id="hero">
       <div className="blur hero-blur"></div>
       <div className="left-h">
         <Header />
         {/* The Best Ad */}
         <div className="the-best-ad">
           <motion.div
-            initial={{ left: "238px" }}
+            initial={{ left: mobile ? "165px" : "238px" }}
             whileInView={{ left: "8px" }}
             transition={{ ...transition, type: "tween" }}
           ></motion.div>
@@ -46,15 +52,19 @@ const Hero = () => {
         {/* Figures */}
         <div className="figures">
           <div>
-            <span>+140</span>
+            <span>
+              <NumberCounter end={140} start={100} delay="4" preFix="+" />
+            </span>
             <span>Expert Coachs</span>
           </div>
           <div>
-            <span>+ 978</span>
+            <span>
+              <NumberCounter end={978} start={800} delay="4" preFix="+" />
+            </span>
             <span>MEMBERS JOINED</span>
           </div>
           <div>
-            <span>+ 50</span>
+            <span><NumberCounter end={50} start={0} delay="4" preFix="+" /></span>
             <span>FITNESS PROGRAMS</span>
           </div>
         </div>
@@ -68,9 +78,9 @@ const Hero = () => {
       <div className="right-h">
         <button className="btn">Join Now</button>
 
-        <motion.div 
-          initial={{right:"-1rem"}}
-          whileInView={{right:"4rem"}}
+        <motion.div
+          initial={{ right: "-1rem" }}
+          whileInView={{ right: "4rem" }}
           transition={transition}
           className="heart-rate"
         >
@@ -81,20 +91,20 @@ const Hero = () => {
 
         {/* Hero images */}
         <img src={HeroImage} alt="" className="hero-image" />
-        <motion.img 
-          initial={{right:"11rem"}}
-          whileInView={{right:"20rem"}}
+        <motion.img
+          initial={{ right: "11rem" }}
+          whileInView={{ right: "20rem" }}
           transition={transition}
-          src={HeroImageBack} 
-          alt="" 
-          className="hero-image-back" 
+          src={HeroImageBack}
+          alt=""
+          className="hero-image-back"
         />
 
         {/* Calories */}
-        <motion.div 
+        <motion.div
           className="calories"
-          initial={{right:"37rem"}}
-          whileInView={{right:"28rem"}}
+          initial={{ right: "37rem" }}
+          whileInView={{ right: "28rem" }}
           transition={transition}
         >
           <img src={Calories} alt="" />

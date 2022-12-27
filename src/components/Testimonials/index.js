@@ -13,7 +13,7 @@ const Testimonials = () => {
   const tLength = testimonialsData.length;
 
   return (
-    <section className="Testimonials">
+    <section className="testimonials" id="testimonials">
       <div className="left-t">
         <span>Testimonials</span>
         <span className="stroke-text">What They</span>
